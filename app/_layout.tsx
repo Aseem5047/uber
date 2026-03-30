@@ -1,29 +1,61 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
-import 'react-native-reanimated';
+import { tokenCache } from "@/lib/auth";
+import { ClerkLoaded, ClerkProvider } from "@clerk/clerk-expo";
+import { useFonts } from "expo-font";
+import { Stack } from "expo-router";
+import * as SplashScreen from "expo-splash-screen";
+import { useEffect } from "react";
+import { SafeAreaView, StatusBar } from "react-native";
+import "react-native-get-random-values";
+import "./globals.css";
 
-import { useColorScheme } from '@/hooks/useColorScheme';
+SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-  });
+	const publishableKey = process.env.EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY!;
 
-  if (!loaded) {
-    // Async font loading only occurs in development.
-    return null;
-  }
+	const [loaded] = useFonts({
+		"Jakarta-Bold": require("../assets/fonts/PlusJakartaSans-Bold.ttf"),
+		"Jakarta-ExtraBold": require("../assets/fonts/PlusJakartaSans-ExtraBold.ttf"),
+		"Jakarta-ExtraLight": require("../assets/fonts/PlusJakartaSans-ExtraLight.ttf"),
+		"Jakarta-Light": require("../assets/fonts/PlusJakartaSans-Light.ttf"),
+		"Jakarta-Medium": require("../assets/fonts/PlusJakartaSans-Medium.ttf"),
+		"Jakarta-Regular": require("../assets/fonts/PlusJakartaSans-Regular.ttf"),
+		"Jakarta-SemiBold": require("../assets/fonts/PlusJakartaSans-SemiBold.ttf"),
+	});
 
-  return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
-      <StatusBar style="auto" />
-    </ThemeProvider>
-  );
+	if (!publishableKey) {
+		throw new Error(
+			"Missing Publishable Key. Please set EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY in your .env"
+		);
+	}
+
+	useEffect(() => {
+		if (loaded) {
+			SplashScreen.hideAsync();
+		}
+	}, [loaded]);
+
+	if (!loaded) {
+		return null;
+	}
+
+	return (
+		<ClerkProvider tokenCache={tokenCache} publishableKey={publishableKey}>
+			<ClerkLoaded>
+				<SafeAreaView className="flex-1">
+					<StatusBar translucent={true} barStyle={"dark-content"} />
+					<Stack>
+						<Stack.Screen name="index" options={{ headerShown: false }} />
+						<Stack.Screen name="(auth)" options={{ headerShown: false }} />
+						<Stack.Screen name="(root)" options={{ headerShown: false }} />
+						<Stack.Screen
+							name="oauth-callback"
+							options={{ headerShown: false }}
+						/>
+						<Stack.Screen name="+not-found" options={{ headerShown: false }} />
+					</Stack>
+				</SafeAreaView>
+			</ClerkLoaded>
+		</ClerkProvider>
+	);
 }
