@@ -2,19 +2,22 @@
 
 A production-grade mobile ride-hailing application built with React Native, designed to mirror the core experience of modern transportation platforms. RideFlow integrates real-time mapping, secure authentication, and live payment processing into a cohesive and scalable mobile product.
 
-<img width="500" alt="Simulator Screenshot - iPhone 16 Plus - 2026-03-30 at 16 04 40 2" src="https://github.com/user-attachments/assets/2c2834b7-9abe-4bf1-a77d-e7f9d500469c" />
-<img width="500" alt="Simulator Screenshot - iPhone 16 Plus - 2026-03-30 at 16 04 35 2" src="https://github.com/user-attachments/assets/2ec65826-95a9-4ef7-acc1-0d3b1b63500a" />
+<p align="center">
+  <img width="300" alt="Screen 1" src="https://github.com/user-attachments/assets/2c2834b7-9abe-4bf1-a77d-e7f9d500469c" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img width="300" alt="Screen 2" src="https://github.com/user-attachments/assets/2ec65826-95a9-4ef7-acc1-0d3b1b63500a" />
+</p>
 
 ---
 
 ## Table of Contents
 
-- [Introduction]
-- [Tech Stack]
-- [Features]
-- [Quick Start]
-- [Environment Variables]
-- [License]
+- [Introduction](#introduction)
+- [Tech Stack](#tech-stack)
+- [Features](#features)
+- [Quick Start](#quick-start)
+- [Environment Variables](#environment-variables)
+- [License](#license)
 
 ---
 
@@ -22,11 +25,13 @@ A production-grade mobile ride-hailing application built with React Native, desi
 
 RideFlow serves as a comprehensive demonstration of full-stack mobile development — from database design to a polished, cross-platform UI. The app covers everything from onboarding and OAuth login to real-time ride booking and Stripe-powered payments, built for developers who want to understand how real-world apps are architected and shipped.
 
+<p align="center">
+  <img width="300" alt="Screen 3" src="https://github.com/user-attachments/assets/501df07d-0273-4ab4-aa47-530aa39b5265" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img width="300" alt="Screen 4" src="https://github.com/user-attachments/assets/b05c340e-d60d-457e-8a90-c4ac0e63455f" />
+</p>
+
 ---
-
-<img width="500" alt="Simulator Screenshot - iPhone 16 Plus - 2026-03-30 at 16 04 48" src="https://github.com/user-attachments/assets/501df07d-0273-4ab4-aa47-530aa39b5265" />
-<img width="500" alt="Simulator Screenshot - iPhone 16 Plus - 2026-03-30 at 16 07 36" src="https://github.com/user-attachments/assets/b05c340e-d60d-457e-8a90-c4ac0e63455f" />
-
 
 ## Tech Stack
 
@@ -60,10 +65,13 @@ RideFlow serves as a comprehensive demonstration of full-stack mobile developmen
 - **Profile Management** — Edit and manage personal account details in-app.
 - **Cross-Platform** — Fully optimized for both Android and iOS.
 
----
+<p align="center">
+  <img width="300" alt="Screen 5" src="https://github.com/user-attachments/assets/647c299c-9739-4a3d-93b3-124509b20f33" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img width="300" alt="Screen 6" src="https://github.com/user-attachments/assets/5c098c02-4131-4cf7-8217-efcf4b7a9348" />
+</p>
 
-<img width="500" height="850" alt="2026-03-30_16-28-11" src="https://github.com/user-attachments/assets/647c299c-9739-4a3d-93b3-124509b20f33" />
-<img width="500" height="850" alt="2026-03-30_16-29-03" src="https://github.com/user-attachments/assets/5c098c02-4131-4cf7-8217-efcf4b7a9348" />
+---
 
 ## Quick Start
 
@@ -75,8 +83,11 @@ Make sure the following are installed on your machine:
 - [Node.js](https://nodejs.org/)
 - [npm](https://www.npmjs.com/)
 
-<img width="500" height="850" alt="2026-03-30_16-29-31" src="https://github.com/user-attachments/assets/6f05add2-7286-4e6d-9612-7e49c17d234b" />
-<img width="500" height="850" alt="2026-03-30_16-29-52" src="https://github.com/user-attachments/assets/2ab07e1f-501a-4b41-b492-ca994ea3e764" />
+<p align="center">
+  <img width="300" alt="Screen 7" src="https://github.com/user-attachments/assets/6f05add2-7286-4e6d-9612-7e49c17d234b" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img width="300" alt="Screen 8" src="https://github.com/user-attachments/assets/2ab07e1f-501a-4b41-b492-ca994ea3e764" />
+</p>
 
 ### Clone the Repository
 
@@ -108,8 +119,11 @@ STRIPE_SECRET_KEY=
 
 > Obtain credentials by signing up at [Clerk](https://clerk.com), [Stripe](https://stripe.com), [Neon](https://neon.tech), [Google Cloud Console](https://console.cloud.google.com), and [Geoapify](https://www.geoapify.com).
 
-<img width="500" height="850" alt="2026-03-30_16-30-46" src="https://github.com/user-attachments/assets/5b6a5b0a-f3d8-41a1-b628-18b77fd2401a" />
-<img width="500" height="850" alt="2026-03-30_16-31-31" src="https://github.com/user-attachments/assets/7dea590d-f886-4be9-9028-0c0905093103" />
+<p align="center">
+  <img width="300" alt="Screen 9" src="https://github.com/user-attachments/assets/5b6a5b0a-f3d8-41a1-b628-18b77fd2401a" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img width="300" alt="Screen 10" src="https://github.com/user-attachments/assets/7dea590d-f886-4be9-9028-0c0905093103" />
+</p>
 
 ### Run the App
 
